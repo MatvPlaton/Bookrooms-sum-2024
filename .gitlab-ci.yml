@@ -1,0 +1,32 @@
+stages:
+  - build
+  - publish
+  - deploy
+
+variables:
+  DOCKER_IMAGE_NAME: "secretanry/bookrooms_frontend:latest"
+
+build:
+  only:
+    - main
+  stage: build
+  script:
+    - docker build -t $DOCKER_IMAGE_NAME .
+
+publish:
+  stage: publish
+  only:
+    - main
+  script:
+    - echo $DOCKER_PASSWORD | docker login -u $DOCKER_LOGIN --password-stdin
+    - docker push $DOCKER_IMAGE_NAME
+
+deploy:
+  stage: deploy
+  image: debian:latest
+  only:
+    - prod
+  script:
+    - echo "Deploying the application..."
+    - apt-get update && apt-get install -y openssh-client
+    - ssh -o StrictHostKeyChecking=no -o BatchMode=yes misha@158.160.128.128 "cd bitflow_back && docker image pull $DOCKER_IMAGE_NAME && docker-compose up -d"

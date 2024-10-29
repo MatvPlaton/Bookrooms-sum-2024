@@ -1,0 +1,66 @@
+.parent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.child{
+    width: 100%;
+    height: 75%;
+    overflow-y: scroll;
+
+    padding-right: 17px;
+    box-sizing: content-box;
+}
+.child::-webkit-scrollbar {
+    width: 0;
+}
+.room {
+    background-color: white;
+    width: 16.5vw;
+    position: relative;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.5vw white;
+    border: #beffed;
+    font-weight: 930;
+    font-size: 1vw;
+    cursor: pointer;
+    color: #61597C;
+    margin-bottom: 0.5vw;
+    margin-left: 1vw;
+    transition: opacity 0.3s;
+
+}
+.room:hover {
+    color: white;
+    background-color: #61597C;
+    box-shadow: 0 0 0.5vw #61597C;
+}
+.container:hover .room:not(:hover) {
+    opacity: 0.5;
+}
+
+
+
+.room:active {
+    transform: translateY(5px);
+}
+.room:disabled {
+    pointer-events: none;
+}
+.show {
+
+
+    width: 1vw;
+    height: 5vw;
+    background-color: white;
+    cursor: pointer;
+    color: #61597C;
+    font-size: 1vw;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.5vw white;
+}

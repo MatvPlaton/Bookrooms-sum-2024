@@ -1,0 +1,91 @@
+.filter {
+    background-color: #61597C;
+    width: 17.5vw;
+    position: relative;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.5vw white;
+    border: #beffed;
+    font-weight: 950;
+    font-size: 1vw;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 0.5vw;
+    margin-left: 1vw;
+    transition: opacity 0.3s;
+    border-radius: 1vw 1vw 0 0;
+}
+
+.filter-icon-wrapper > img {
+    width: 1.4em;
+    height: 1.4em;
+    /* target color happends to be white, so we're good with that */
+    filter: invert(100%);
+    position: absolute;
+    left: 80%
+}
+.filter-row {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    font-weight: bolder;
+    font-size: 1vw;
+}
+.filter-row > span {
+    color: var(--ter-fixed);
+    font-weight: bolder;
+}
+
+.filter-row > select {
+    margin-left: -2px;
+    border: 0;
+    background: transparent;
+    font-size: 1vw;
+    border-radius: 5px;
+    color: var(--ter-on);
+    font-weight: bolder;
+}
+
+.filter-row > select:focus {
+    outline: var(--ter-fixed) solid 1px;
+    /* color: var(--ter-fixed); */
+
+}
+.filter-row > select > option {
+    color: #61597C;
+    font-weight: bold;
+}
+.filter-firstrow > span {
+    font-size: inherit;
+    color: var(--ter-fixed);
+    /* margin: 0 0.5em; */
+}
+
+.timepicker {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    font-size: 1vw;
+
+    /* margin-bottom: 10px; */
+}
+.until {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 10%;
+    top: 42%;
+    font-size: inherit;
+}
+.datepicker {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 70%;
+    top: 15%;
+    font-size: inherit;
+}

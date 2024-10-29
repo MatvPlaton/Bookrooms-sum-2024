@@ -1,0 +1,124 @@
+@keyframes slideDown {
+    from {
+        transform: translateY(-300%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.overlay {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 40vw;
+    height: 30vw;
+    border-radius: 2vw;
+    background-color: white;
+    color: #61597C;
+    animation: slideDown 1s ease forwards;
+    transform: translate(-50%, -50%);
+}
+.back_btn {
+    position: absolute;
+    left: 93%;
+    top: 5%;
+    font-size: 2vw;
+    cursor: pointer;
+}
+.time-wrapper {
+    border:none;
+    height: 2vw;
+    border-radius: 1vw;
+
+}
+
+
+.timeline {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    background-color: #e0e0e0;
+    position: relative;
+}
+.bar {
+    height: 100%;
+    background-color: #cfc;
+    position: absolute;
+}
+.bar.night {
+    background-color: #888;
+}
+
+.bar.custom {
+    background-color: #9d89c0;
+    border-radius: 0.2vw;
+    top: 2vw; /* Adjust this to position above the main timeline */
+    height: 1vw; /* Height of the custom time slot bar */
+     /* Calculate width based on duration */
+}
+.labels {
+    position: absolute;
+    width: 80%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    top: 7vw;
+    left: 10%;
+    color: #61597C;
+    font-size: 1vw;
+}
+.label {
+    text-align: center;
+    width: 20%;
+}
+.button {
+    position: absolute;
+    left: 23.5vw;
+    top: 1.2vw;
+    width: 5vw;
+    height: 2vw;
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    border: none;
+    background-color: #61597C;
+    color: white;
+    font-weight: bold;
+}
+
+.scheduler {
+    position: relative;
+    top: 10vw;
+}
+.submit-box {
+    position: relative;
+    top: 15vw;
+    width: 40vw;
+    height: 5vw;
+    left: 2vw;
+    font-size: 1vw;
+}
+.time-wrapper {
+    border: none;
+}
+.submit-button {
+    position: absolute;
+    top:2.5vw;
+    right:5vw;
+    width: 5vw;
+    height: 2vw;
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    border: none;
+    background-color: #61597C;
+    color: white;
+    font-weight: bold;
+}
+.submit-button:hover {
+    background-color: #4d4364;
+
+}
+.submit-button:active {
+    transform: translateY(3px);
+}

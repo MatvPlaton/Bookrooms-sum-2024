@@ -1,0 +1,35 @@
+body {
+  background-color: #626e76;
+  font-family: Inter, sans-serif;
+  font-weight: bolder;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blue-box {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 20vw;
+  height: 45vw;
+  border-radius: 2vw;
+  background-color: #beffed;
+  box-shadow: 0 0 2vw #beffed;
+  overflow: hidden;
+
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+
+}
+::-webkit-scrollbar {
+  width: 0;
+}
